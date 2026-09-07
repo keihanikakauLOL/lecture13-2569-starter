@@ -1,4 +1,5 @@
 import { type SidebarProps } from "../libs/Sidebar";
+import { Link } from "react-router";
 
 export default function Sidebar({ userName, type }: SidebarProps) {
   return (
@@ -12,9 +13,14 @@ export default function Sidebar({ userName, type }: SidebarProps) {
           <h3 className="navbar-brand">Todo List App</h3>
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" href="#">
+              {/* <a className="nav-link active" href="#">
                 <span className="d-md-inline px-2">Home</span>
-              </a>
+              </a> */}
+
+              <Link className="nav-link" to="/">
+                <span className="d-md-inline px-2">Home</span>
+              </Link>
+              
             </li>
             <li className="nav-item dropdown">
               <a
@@ -27,9 +33,14 @@ export default function Sidebar({ userName, type }: SidebarProps) {
               </a>
               <ul className="dropdown-menu p-2">
                 <li>
-                  <a className="nav-link active" href="#">
+                  {/* <a className="nav-link active" href="#">
                     <span className="d-md-inline px-2">TodolistPage</span>
-                  </a>
+                  </a> */}
+
+                  <Link className="dropdown-item" to="/my/todolistpage">
+                    <span className="d-md-inline px-2">TodolistPage</span>
+                  </Link>
+                  
                 </li>
               </ul>
             </li>
